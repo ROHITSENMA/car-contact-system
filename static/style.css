@@ -1,0 +1,6 @@
+body{background:#111;color:#0f0;font-family:Arial;text-align:center;}
+.dashboard-card{background:#222;width:90%;max-width:400px;margin:50px auto;padding:20px;border-radius:20px;box-shadow:0 0 15px #0f0;}
+input{padding:10px;font-size:18px;width:80%;border-radius:10px;border:none;margin-bottom:10px;}
+button{padding:10px 20px;font-size:18px;border-radius:10px;border:none;background:#0f0;color:#111;cursor:pointer;}
+button:hover{background:#0c0;}
+h1{color:#0f0;}

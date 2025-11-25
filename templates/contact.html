@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Car Verification</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="dashboard-card">
+<h2>Enter Last 4 Digits</h2>
+<input type="text" id="digits">
+<button onclick="verify()">Verify</button>
+<p id="msg"></p>
+</div>
+<script>
+async function verify(){
+let d=document.getElementById("digits").value;
+let res=await fetch("/verify",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({token:"{{ token }}",digits:d})});
+let data=await res.json();
+if(data.success) window.location=data.redirect;
+else document.getElementById("msg").innerText=data.msg;
+}
+</script>
+</body>
+</html>

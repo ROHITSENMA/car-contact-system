@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="dashboard-card">
+<h2>Admin Dashboard</h2>
+<ul>
+{% for car in cars %}
+<li>{{ car.nickname }} — {{ car.last4 }} — {{ car.owner_name }} — {{ car.owner_phone }}</li>
+{% endfor %}
+</ul>
+</div>
+</body>
+</html>

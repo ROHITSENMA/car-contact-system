@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Owner Info</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="dashboard-card">
+<h2>Owner Verified</h2>
+<p>Name: {{ car.owner_name }}</p>
+<h1>{{ car.owner_phone }}</h1>
+</div>
+</body>
+</html>
