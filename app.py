@@ -176,7 +176,15 @@ def admin():
 # -----------------------------
 # App Start
 # -----------------------------
-if __name__=="__main__":
-    init_db()
-    print("App started. Visit /qr/car1 or /qr/car2 to generate QR codes.")
-    app.run(host="0.0.0.0", port=5000, debug=True)
+# if __name__=="__main__":
+#     init_db()
+#     print("App started. Visit /qr/car1 or /qr/car2 to generate QR codes.")
+#     app.run(host="0.0.0.0", port=5000, debug=True) 
+#App Ends
+            
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    host = "0.0.0.0"
+    app.run(host=host, port=port)
